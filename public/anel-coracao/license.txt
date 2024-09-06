@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ring_01 - Free
+* source:	https://sketchfab.com/3d-models/ring-01-free-92526ae4e7da47178ac23cde0932bace
+* author:	ucukcontorian (https://sketchfab.com/ucukcontorian)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ring_01 - Free" (https://sketchfab.com/3d-models/ring-01-free-92526ae4e7da47178ac23cde0932bace) by ucukcontorian (https://sketchfab.com/ucukcontorian) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Jewelry
+* source:	https://sketchfab.com/3d-models/jewelry-4373121e41f94727bb802b78ce6b566f
+* author:	elbenZ (https://sketchfab.com/elbenZ)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Jewelry" (https://sketchfab.com/3d-models/jewelry-4373121e41f94727bb802b78ce6b566f) by elbenZ (https://sketchfab.com/elbenZ) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
