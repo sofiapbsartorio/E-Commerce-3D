@@ -10,21 +10,69 @@ header {
   border: 0;
 }
 
-model-viewer {
-  width: 300px;
-  height: 300px;
-}
-
 .model-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas com largura igual */
-  gap: 20px; /* Espaçamento entre os itens */
-  justify-items: center; /* Centraliza os itens horizontalmente */
-  margin: 0 auto;
-  max-width: 1200px; /* Limita a largura máxima da grid */
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo */
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 20px; /* Espaço entre os itens */
+  margin: 40px auto;
+  max-width: 1200px; /* Limite de largura para manter centralizado */
 }
 
-model-viewer {
-  width: 250px;
-  height: 250px;
+.product-item {
+  text-align: center;
+  margin-bottom: 20px;
+  flex: 1 1 300px; /* Cada item terá ao menos 300px, se possível */
+  max-width: 300px; /* Limita a largura de cada item */
+}
+
+.model-viewer {
+  width: 100%; /* Faz com que o viewer ocupe 100% da largura do container */
+  height: 300px; /* Altura fixa para os modelos */
+}
+
+.product-info {
+  margin-top: 10px;
+}
+
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #fff;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scrolled .navbar-brand {
+  color: #fff;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scroll,
+.navbar-scrolled {
+  background-color: #cbbcb1;
+}
+
+.mask-custom {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, .15);
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  letter-spacing: 3px;
+}
+
+#intro {
+  background-size: cover; /* Faz a imagem ocupar o tamanho inteiro de forma responsiva */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Garante que a imagem seja exibida apenas uma vez */
+  height: 50vh; /* Ocupa 50% da altura da tela */
+  width: 100%; /* Largura total */
+}
+
+.mask {
+  height: 100%; /* Faz o overlay ocupar toda a altura do div */
 }

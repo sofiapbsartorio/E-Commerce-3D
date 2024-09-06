@@ -13,69 +13,153 @@
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
   
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
-        <span class="navbar-toggler-icon"></span>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
+    <div class="container">
+      <a class="navbar-brand" href="#!"><span style="color: #104217;">3D</span><span style="color: #fff;">Jewelry</span></a>
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#">Sobre</a>
-          <a class="nav-link" href="#">Contato</a>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#!">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!">Contato</a>
+          </li>
+
+        </ul>
+        <ul class="navbar-nav d-flex flex-row">
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#!">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#!">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#!">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
+  <!-- Navbar -->
 </header>
+
+<section>
+  <div id="intro" class="bg-image vh-50" style="background-image: url('img/fundo-homepage.jpg');">
+    <div class="mask" style="background-color: rgba(250, 182, 162, 0.15);"></div>
+  </div>
+</section>
 
 <main>
   <div class="model-container">
-    <!-- Primeira linha -->
-    <model-viewer src="/public/anel-coracao/scene.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
-      <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
+    <!-- Produto 1: Anel Coração -->
+    <div class="product-item">
+      <model-viewer src="/public/anel-coracao/scene.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+      </model-viewer>
+      <div class="product-info text-center">
+        <h5>Anel Coração</h5>
+        <p>Preço: R$ 299,90</p>
+        <p>Um lindo anel em formato de coração com detalhes delicados.</p>
+        <button class="btn" style="background-color: #352c2c; border-color:#104217; color: #fff">Comprar</button>
       </div>
-    </model-viewer>
-  
-    <model-viewer src="/public/varios/scene.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
-      <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
+    </div>
+
+    <!-- Produto 2: Brincos Vários -->
+    <div class="product-item">
+      <model-viewer src="/public/varios/scene.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+      </model-viewer>
+      <div class="product-info text-center">
+        <h5>Conjunto Acessórios</h5>
+        <p>Preço: R$ 199,90</p>
+        <p>Conjunto de acessórios com diferentes formas geométricas.</p>
+        <button class="btn" style="background-color: #352c2c; border-color:#104217; color: #fff">Comprar</button>
       </div>
-    </model-viewer>
-  
-    <model-viewer src="/public/anel-vintage/scene.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
-      <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
+    </div>
+
+    <!-- Produto 3: Anel Vintage -->
+    <div class="product-item">
+      <model-viewer src="/public/anel-vintage/scene.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+      </model-viewer>
+      <div class="product-info text-center">
+        <h5>Anel Vintage</h5>
+        <p>Preço: R$ 359,90</p>
+        <p>Anel com design vintage, ideal para ocasiões especiais.</p>
+        <button class="btn" style="background-color: #352c2c; border-color:#104217; color: #fff">Comprar</button>
       </div>
-    </model-viewer>
-  
-    <!-- Segunda linha -->
-    <model-viewer src="/public/brinco-estrelas/scene.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
-      <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
+    </div>
+
+    <!-- Produto 4: Brinco Estrelas -->
+    <div class="product-item">
+      <model-viewer src="/public/brinco-estrelas/scene.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+      </model-viewer>
+      <div class="product-info text-center">
+        <h5>Brinco Argola com Estrelas</h5>
+        <p>Preço: R$ 249,90</p>
+        <p>Brinco inspirado no brilho das estrelas, perfeito para ocasiões festivas.</p>
+        <button class="btn" style="background-color: #352c2c; border-color:#104217; color: #fff">Comprar</button>
       </div>
-    </model-viewer>
-  
-    <model-viewer src="/public/colar/scene.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
-      <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
+    </div>
+
+    <!-- Produto 5: Colar Delicado -->
+    <div class="product-item">
+      <model-viewer src="/public/colar/scene.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+      </model-viewer>
+      <div class="product-info text-center">
+        <h5>Colar Delicado</h5>
+        <p>Preço: R$ 179,90</p>
+        <p>Colar com design minimalista, perfeito para o dia a dia.</p>
+        <button class="btn" style="background-color: #352c2c; border-color:#104217; color: #fff">Comprar</button>
       </div>
-    </model-viewer>
-  
-    <model-viewer src="/public/pulseira-ametista/scene.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
-      <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
+    </div>
+
+    <!-- Produto 6: Pulseira Ametista -->
+    <div class="product-item">
+      <model-viewer src="/public/pulseira-ametista/scene.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+      </model-viewer>
+      <div class="product-info text-center">
+        <h5>Pulseira Ametista</h5>
+        <p>Preço: R$ 299,90</p>
+        <p>Pulseira elegante com pedra ametista, ideal para um visual sofisticado.</p>
+        <button class="btn" style="background-color: #352c2c; border-color:#104217; color: #fff">Comprar</button>
       </div>
-    </model-viewer>
+    </div>
   </div>
-</main>
+</main> 
 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-  
 </body>
 </html>
