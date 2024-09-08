@@ -26,7 +26,20 @@ header {
   max-width: 300px; /* Limita a largura de cada item */
 }
 
+.product-item-pagina {
+  text-align: left;
+  margin-bottom: 20px;
+  flex: 1 1 500px; /* Cada item terá ao menos 300px, se possível */
+  max-width: 500px; /* Limita a largura de cada item */
+}
+
 .model-viewer {
+  width: 100%; /* Faz com que o viewer ocupe 100% da largura do container */
+  height: 300px; /* Altura fixa para os modelos */
+}
+
+.model-viewer-pagina {
+  text-align: left;
   width: 100%; /* Faz com que o viewer ocupe 100% da largura do container */
   height: 300px; /* Altura fixa para os modelos */
 }
@@ -70,6 +83,14 @@ header {
   background-position: center; /* Centraliza a imagem */
   background-repeat: no-repeat; /* Garante que a imagem seja exibida apenas uma vez */
   height: 50vh; /* Ocupa 50% da altura da tela */
+  width: 100%; /* Largura total */
+}
+
+#intro-paginas-produtos {
+  background-size: cover; /* Faz a imagem ocupar o tamanho inteiro de forma responsiva */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Garante que a imagem seja exibida apenas uma vez */
+  height: 9vh; /* Ocupa somente o espaço da navbar */
   width: 100%; /* Largura total */
 }
 
