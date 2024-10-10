@@ -4,7 +4,6 @@
 		"version":"2.0"
 	},
 	"extensionsUsed":[
-		"KHR_materials_clearcoat",
 		"KHR_materials_transmission",
 		"KHR_materials_specular",
 		"KHR_materials_ior"
@@ -27,10 +26,6 @@
 	"materials":[
 		{
 			"extensions":{
-				"KHR_materials_clearcoat":{
-					"clearcoatFactor":0.16363637149333954,
-					"clearcoatRoughnessFactor":0.11363636702299118
-				},
 				"KHR_materials_transmission":{
 					"transmissionFactor":0.1772727221250534
 				},
@@ -93,9 +88,9 @@
 			"uri":"Image_0.jpg"
 		},
 		{
-			"mimeType":"image/jpeg",
+			"mimeType":"image/png",
 			"name":"Image_2",
-			"uri":"Image_2.jpg"
+			"uri":"Image_2.png"
 		},
 		{
 			"mimeType":"image/jpeg",
@@ -174,7 +169,7 @@
 	"buffers":[
 		{
 			"byteLength":1022164,
-			"uri":"untitled.bin"
+			"uri":"legolas.bin"
 		}
 	]
 }

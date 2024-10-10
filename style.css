@@ -1,99 +1,179 @@
-body, html {
+/* Geral */
+body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  width: 100%;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-header {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-.model-container {
-  display: flex;
-  flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo */
-  justify-content: center; /* Centraliza horizontalmente */
-  gap: 20px; /* Espaço entre os itens */
-  margin: 40px auto;
-  max-width: 1200px; /* Limite de largura para manter centralizado */
-}
-
-.product-item {
-  text-align: center;
-  margin-bottom: 20px;
-  flex: 1 1 300px; /* Cada item terá ao menos 300px, se possível */
-  max-width: 300px; /* Limita a largura de cada item */
-}
-
-.product-item-pagina {
-  text-align: left;
-  margin-bottom: 20px;
-  flex: 1 1 500px; /* Cada item terá ao menos 300px, se possível */
-  max-width: 500px; /* Limita a largura de cada item */
-}
-
-.model-viewer {
-  width: 100%; /* Faz com que o viewer ocupe 100% da largura do container */
-  height: 300px; /* Altura fixa para os modelos */
-}
-
-.model-viewer-pagina {
-  text-align: left;
-  width: 100%; /* Faz com que o viewer ocupe 100% da largura do container */
-  height: 300px; /* Altura fixa para os modelos */
-}
-
-.product-info {
-  margin-top: 10px;
-}
-
-/* Color of the links BEFORE scroll */
-.navbar-scroll .nav-link,
-.navbar-scroll .navbar-toggler-icon,
-.navbar-scroll .navbar-brand {
-  color: #fff;
-}
-
-/* Color of the links AFTER scroll */
-.navbar-scrolled .nav-link,
-.navbar-scrolled .navbar-toggler-icon,
-.navbar-scrolled .navbar-brand {
-  color: #fff;
-}
-
-/* Color of the navbar AFTER scroll */
-.navbar-scroll,
-.navbar-scrolled {
-  background-color: #cbbcb1;
-}
-
-.mask-custom {
-  backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, .15);
+/* Navbar */
+.navbar {
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
-  font-size: 1.75rem;
-  letter-spacing: 3px;
+  font-size: 1.8rem;
+  color: #104217;
+  font-weight: bold;
 }
 
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  color: #555;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #104217;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+/* Seção de Introdução */
 #intro {
-  background-size: cover; /* Faz a imagem ocupar o tamanho inteiro de forma responsiva */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Garante que a imagem seja exibida apenas uma vez */
-  height: 50vh; /* Ocupa 50% da altura da tela */
-  width: 100%; /* Largura total */
+  height: 50vh;
+  background-image: url('/img/fundo-homepage.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-#intro-paginas-produtos {
-  background-size: cover; /* Faz a imagem ocupar o tamanho inteiro de forma responsiva */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Garante que a imagem seja exibida apenas uma vez */
-  height: 9vh; /* Ocupa somente o espaço da navbar */
-  width: 100%; /* Largura total */
+#intro .mask {
+  background-color: rgba(250, 182, 162, 0.15);
 }
 
-.mask {
-  height: 100%; /* Faz o overlay ocupar toda a altura do div */
+/* Estilos para a área de produtos */
+.model-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.product-item {
+  margin: 15px;
+  max-width: 300px;
+}
+
+model-viewer {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.product-info h5 {
+  font-size: 1.4rem;
+  color: #104217;
+}
+
+.product-info h6 {
+  font-size: 1.2rem;
+  color: #352c2c;
+}
+
+.product-info p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.btn {
+  background-color: #104217;
+  border: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #083210;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+
+  .model-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.product-item {
+  width: 300px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-info h5 {
+  font-size: 1.4rem;
+  color: #104217;
+  margin-bottom: 5px;
+}
+
+.product-info h6 {
+  font-size: 1.2rem;
+  color: #352c2c;
+}
+
+.product-info p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #104217;
+  border-color: #104217;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #083210;
+}
+
+
+#carouselSection {
+  margin-top: 20px; /* Espaçamento superior para o carrossel */
+}
+
+#imageCarousel {
+  max-height: 400px; /* Define uma altura máxima para o carrossel */
+  overflow: hidden; /* Esconde qualquer parte da imagem que exceda a altura do carrossel */
+}
+
+.carousel-item img {
+  height: 100%; /* Faz a imagem ocupar toda a altura do carrossel */
+  width: 100%; /* Faz a imagem ocupar toda a largura do carrossel */
+  object-fit: cover; /* Cobre a área da imagem sem distorção */
+  border-radius: 10px; /* Arredondar os cantos das imagens */
 }
