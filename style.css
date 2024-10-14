@@ -66,6 +66,11 @@ model-viewer {
   overflow: hidden;
 }
 
+.model-viewer-pagina {
+  width: 450px;
+  height: 450px;
+}
+
 .product-info {
   padding: 15px;
   text-align: center;
