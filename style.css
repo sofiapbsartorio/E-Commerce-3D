@@ -32,6 +32,18 @@ body {
 
 .navbar-toggler {
   border: none;
+  outline: none;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
 }
 
 /* Seção de Introdução */
@@ -57,74 +69,6 @@ body {
 .product-item {
   margin: 15px;
   max-width: 300px;
-}
-
-model-viewer {
-  width: 100%;
-  height: 300px; /* Ajuste essa altura conforme necessário */
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.model-viewer-pagina {
-  width: 450px;
-  height: 450px;
-}
-
-.product-info {
-  padding: 15px;
-  text-align: center;
-}
-
-.product-info h5 {
-  font-size: 1.4rem;
-  color: #104217;
-}
-
-.product-info h6 {
-  font-size: 1.2rem;
-  color: #352c2c;
-}
-
-.product-info p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.btn {
-  background-color: #104217;
-  border: none;
-  color: #fff;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #083210;
-}
-
-/* Responsividade */
-@media (max-width: 992px) {
-  .navbar-nav {
-    text-align: center;
-  }
-
-  .navbar-nav .nav-item {
-    margin: 10px 0;
-  }
-
-  .model-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Alinha os produtos no centro */
-    gap: 20px; /* Espaçamento entre os produtos */
-    margin: 40px 0;
-  }  
-}
-
-
-.product-item {
-  margin: 15px;
-  flex: 1 1 300px; /* Faz o item ocupar 300px de largura, ajustando conforme o espaço */
   text-align: center;
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -133,10 +77,21 @@ model-viewer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .product-item:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+model-viewer {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.model-viewer-pagina {
+  width: 100%;
+  height: 450px;
 }
 
 .product-info {
@@ -160,9 +115,10 @@ model-viewer {
   margin-bottom: 20px;
 }
 
+/* Botões */
 .btn {
   background-color: #104217;
-  border-color: #104217;
+  border: none;
   color: #fff;
   transition: background-color 0.3s ease;
 }
@@ -171,19 +127,19 @@ model-viewer {
   background-color: #083210;
 }
 
-
+/* Carrossel */
 #carouselSection {
-  margin-top: 20px; /* Espaçamento superior para o carrossel */
+  margin-top: 20px;
 }
 
 #imageCarousel {
-  max-height: 400px; /* Define uma altura máxima para o carrossel */
-  overflow: hidden; /* Esconde qualquer parte da imagem que exceda a altura do carrossel */
+  max-height: 400px;
+  overflow: hidden;
 }
 
 .carousel-item img {
-  height: 100%; /* Faz a imagem ocupar toda a altura do carrossel */
-  width: 100%; /* Faz a imagem ocupar toda a largura do carrossel */
-  object-fit: cover; /* Cobre a área da imagem sem distorção */
-  border-radius: 10px; /* Arredondar os cantos das imagens */
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
