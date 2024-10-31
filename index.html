@@ -153,12 +153,11 @@
 </main>
 
 <!-- Modal -->
-<div class="modal fade" id="optionsModal" tabindex="-1" aria-labelledby="optionsModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<div class="modal fade" id="optionsModal" tabindex="-1" aria-labelledby="optionsModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered"> <!-- Adiciona modal-dialog-centered para centralizar verticalmente -->
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="optionsModalLabel">Escolha a visualização</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p>De qual forma você gostaria de visualizar os produtos?</p>
@@ -191,8 +190,11 @@
       currentView = view; // Atualiza a visualização atual
     }
 
-    // Exibe o modal sempre que a página é carregada
-    const optionsModal = new bootstrap.Modal(document.getElementById('optionsModal'));
+    // Exibe o modal sempre que a página é carregada e impede o fechamento sem uma escolha
+    const optionsModal = new bootstrap.Modal(document.getElementById('optionsModal'), {
+      backdrop: 'static',
+      keyboard: false
+    });
     optionsModal.show();
 
     // Adiciona eventos aos botões do modal
@@ -213,6 +215,7 @@
     });
   });
 </script>
+
 
 </body>
 </html>
