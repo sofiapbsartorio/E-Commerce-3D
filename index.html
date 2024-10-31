@@ -67,10 +67,16 @@
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/imagem-1.png" class="d-block w-100" alt="...">
+        <picture>
+          <source media="(max-width: 576px)" srcset="img/1.png"> <!-- Imagem para celulares -->
+          <img src="img/imagem-1.png" class="d-block w-100" alt="Imagem 1">
+        </picture>
       </div>
       <div class="carousel-item">
-        <img src="img/imagem-2.png" class="d-block w-100" alt="...">
+        <picture>
+          <source media="(max-width: 576px)" srcset="img/2.png"> <!-- Imagem para celulares -->
+          <img src="img/imagem-2.png" class="d-block w-100" alt="Imagem 2">
+        </picture>
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -83,6 +89,9 @@
     </button>
   </div>
 </section>
+
+
+
 
 <main>
   <div class="model-container" id="modelContainer">

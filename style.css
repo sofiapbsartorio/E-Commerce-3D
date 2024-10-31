@@ -138,8 +138,7 @@ model-viewer {
 }
 
 .carousel-item img {
-  height: 100%;
   width: 100%;
+  height: auto;
   object-fit: cover;
-  border-radius: 10px;
 }
